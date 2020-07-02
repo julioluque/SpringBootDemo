@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Pagina de inicio Spring Boot</title>
+</head>
+<body>
+
+	<p th:text="'Hola, ' + ${name} + '!'" />
+	
+	<table>
+		<th:block th:each="per : ${personas}">
+			<tr>
+				<td th:text="${per.id}" />
+				<td th:text="${per.nombre}" />
+			</tr>
+		</th:block>
+	</table>
+	
+</body>
+</html>
